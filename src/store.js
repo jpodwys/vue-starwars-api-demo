@@ -6,12 +6,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 	state: {
     list: []
-	},
+  },
+  
 	mutations: {
     setList (state, list) {
       state.list = list;
     }
   },
+  
   actions: {
     getPeople ({ commit }) {
       getPeople().then(res => {
