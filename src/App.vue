@@ -4,7 +4,8 @@
     <button class="inline" @click="getPeople">Get People</button>
     <button class="inline" @click="getPlanets">Get Starships</button>
     <button class="inline" @click="getStarships">Get Starships</button>
-    <ul>
+    <div v-if="loading">Loading...</div>
+    <ul v-if="!loading">
       <li v-for="item in list" :key="item.name">
         {{ item.name }}
       </li>
@@ -17,7 +18,7 @@ import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'app',
-  computed:  mapState([ 'list' ]),
+  computed:  mapState([ 'loading', 'list' ]),
   methods: mapActions([ 'getPeople', 'getPlanets', 'getStarships' ])
 }
 </script>
