@@ -1,4 +1,4 @@
-# sw-api
+# vue-starwars-api-demo
 
 ## Project setup
 ```
