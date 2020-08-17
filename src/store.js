@@ -9,7 +9,7 @@ export default new Vuex.Store({
     list: []
   },
   
-	mutations: {
+  mutations: {
     setLoading (state, val) {
       state.loading = val;
     },
